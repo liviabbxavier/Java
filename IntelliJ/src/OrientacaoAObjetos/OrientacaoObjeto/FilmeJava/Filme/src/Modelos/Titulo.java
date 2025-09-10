@@ -21,7 +21,7 @@ public class Titulo {
         return anoDeLancamento;
     }
 
-    public boolean getIncluidoNoPlano() {
+    public boolean isIncluidoNoPlano() {
         return incluidoNoPlano;
     }
 
@@ -41,12 +41,12 @@ public class Titulo {
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
-    }
-
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     public void exibeFichaTecnica(){
@@ -64,6 +64,5 @@ public class Titulo {
     }
 
     public void classificacao() {
-
     }
 }

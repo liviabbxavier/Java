@@ -1,5 +1,7 @@
 package Modelos;
 
+import Calculos.Classificavel;
+
 public class Filme extends Titulo implements Classificavel {
    private String diretor;
 
@@ -16,4 +18,8 @@ public class Filme extends Titulo implements Classificavel {
         return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 
+    @Override
+    public int getClassificacao() {
+        return (int) pegaMedia() / 2;
+    }
 }
