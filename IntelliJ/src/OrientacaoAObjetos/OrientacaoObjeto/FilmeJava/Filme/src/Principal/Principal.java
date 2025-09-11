@@ -1,6 +1,8 @@
 package Principal;
 
 import Calculos.CalculadoraDeTempo;
+import Calculos.FiltroRecomendacao;
+import Modelos.Episodio;
 import Modelos.Filme;
 import Modelos.Serie;
 
@@ -51,6 +53,15 @@ public class Principal {
         calculadora.inclui(novoFilme);
         calculadora.inclui(oVeraoQMudouMinhaVida);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(10);
+        episodio.setSerie(oVeraoQMudouMinhaVida);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(novoFilme);
