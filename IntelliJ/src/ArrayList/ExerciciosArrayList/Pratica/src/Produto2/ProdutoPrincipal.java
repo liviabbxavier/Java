@@ -2,27 +2,29 @@ package Produto2;
 
 import java.util.ArrayList;
 
+//🧮 Exercício 2 – Lista de Produtos
+//Crie uma classe Produto com os atributos nome e preco.
+//Adicione produtos a um ArrayList, imprima o total de produtos e o produto mais caro.
+
 public class ProdutoPrincipal {
     public static void main(String[] args) {
 
-        Produto produto1 = new Produto();
-        produto1.setNome("Cama");
-        produto1.setPreco(700);
-
-        Produto produto2 = new Produto();
-        produto2.setNome("Guarda-Roupa");
-        produto2.setPreco(1000);
-
-        Produto produto3 = new Produto();
-        produto3.setNome("Cômoda");
-        produto3.setPreco(400);
-
         ArrayList<Produto> listaDeProdutos = new ArrayList<>();
-        listaDeProdutos.add(produto1);
-        listaDeProdutos.add(produto2);
-        listaDeProdutos.add(produto3);
+        listaDeProdutos.add(new Produto("Smartphone", 2200.00));
+        listaDeProdutos.add(new Produto("Fone de ouvido", 250.00));
+        listaDeProdutos.add(new Produto("Monitor", 1200.00));
+
+
         System.out.println("Tamanho da lista: " + listaDeProdutos.size());
         System.out.println(listaDeProdutos);
-        System.out.println("O produto mais caro é: " + produto2.getNome() + " Que está pelo preço de: " + produto2.getPreco());
-    }
+
+        Produto maisCaro = listaDeProdutos.get(0);
+        for (Produto p : listaDeProdutos) {
+            if (p.getPreco() > maisCaro.getPreco()) {
+                maisCaro = p;
+            }
+        }
+
+        System.out.println("Produto mais caro: " + maisCaro);
+        }
 }
