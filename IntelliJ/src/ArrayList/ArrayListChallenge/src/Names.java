@@ -14,12 +14,14 @@ public class Names {
         ArrayList<String> names = new ArrayList<>();
         Scanner read = new Scanner(System.in);
         System.out.println(header);
-        while (true) {
-            int choice = read.nextInt();
+        int choice = 0;
+        while (choice != 4) {
+            choice = read.nextInt();
             switch (choice) {
                 case 1:
                     System.out.print("Digite o nome: ");
-                    String newName = read.next();
+                    read.nextLine();
+                    String newName = read.nextLine();
                     names.add(newName);
                     System.out.println("Nome adicionado!");
                     System.out.println(header);
@@ -39,7 +41,8 @@ public class Names {
 
                 case 3:
                     System.out.print("Digite o nome que você deseja remover: ");
-                    String remove = read.next();
+                    read.nextLine();
+                    String remove = read.nextLine();
                     names.remove(remove);
                     System.out.println(remove + "removido com sucesso!");
                     System.out.println(header);
