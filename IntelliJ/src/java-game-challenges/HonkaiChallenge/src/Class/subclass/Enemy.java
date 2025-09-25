@@ -1,10 +1,12 @@
 package Class.subclass;
 
-public class AbyssalDragon extends Character {
-    //Fraqueza: Quântico, vento, imaginário
-
+public class Enemy extends Character {
     private String type;
     private int attackDmg;
+
+    public Enemy(String name, int life, String type) {
+        super();
+    }
 
     public String getType() {
         return type;
@@ -23,8 +25,13 @@ public class AbyssalDragon extends Character {
     }
 
     @Override
-    public void setLife(int life) {
-        super.setLife(life);
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
+    public int getLife() {
+        return super.getLife();
     }
 
     @Override
@@ -35,15 +42,5 @@ public class AbyssalDragon extends Character {
     @Override
     public boolean isAlive() {
         return super.isAlive();
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName(name);
     }
 }
